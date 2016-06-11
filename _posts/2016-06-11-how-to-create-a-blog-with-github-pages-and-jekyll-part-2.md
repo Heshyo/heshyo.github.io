@@ -42,3 +42,5 @@ jekyll serve
 ```
 
 It will create your static website and open a local webserver for you to test. Just head over to <http://127.0.0.1:4000/> (or whatever address and port number is displayed by the ```jekyll serve``` command), and you should see the index of your website.
+
+Check [part 3](./how-to-create-a-blog-with-github-pages-and-jekyll-part-3.html) to write your first post.
