@@ -77,7 +77,7 @@ This contains several sub folders, mostly
 This mostly contains the `console` file, which allows you to execute commands. It's like a [CLI](https://en.wikipedia.org/wiki/Command-line_interface), and bundles can add their own commands. For example you'll often have to run the following command to clear Symfony's cache:
 
 ```
-php app/console cache:clear
+php bin/console cache:clear
 ```
 
 ### src folder
