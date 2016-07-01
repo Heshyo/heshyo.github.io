@@ -14,4 +14,4 @@ How to host your site/blog on GitHub Pages
     git clone https://github.com/username/username.github.io
 4.	You can create a simple index.html file, commit it and push it. Then go to <http://username.github.io/> and that's it!
 
-Check [part 2](./how-to-create-a-blog-with-github-pages-and-jekyll-part-2.html) to install Jekyll.
+Check [part 2](/2016/06/11/how-to-create-a-blog-with-github-pages-and-jekyll-part-2.html) to install Jekyll.

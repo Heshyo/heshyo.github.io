@@ -36,4 +36,4 @@ How to create you first Jekyll post
 
 5.	Save it. If you haven't already done so, run ```jekyll serve```. This will generate the corresponding html file under  ```_site```. Head over to <http://127.0.0.1:4000/year/month/day/name-of-your-awesome-post.html> (or whatever address and port number is displayed by the ```jekyll serve``` command). Note that the extension will be ```html```.
 
-Now you'll probably noticed that your post is not really sexy...so head over to the [next part]./how-to-create-a-blog-with-github-pages-and-jekyll-part-4.html) to fix that.
+Now you'll probably noticed that your post is not really sexy...so head over to the [next part](/2016/06/11/how-to-create-a-blog-with-github-pages-and-jekyll-part-4.html) to fix that.
