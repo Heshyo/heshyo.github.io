@@ -36,8 +36,9 @@ public function postArticleAction(Request $request) {
     // If the ID is automatically created, then you'll have access to it
     // after the query is executed.
 
-    // Returns the created article. With FOSRestBundle, the caller will get the object back.
-    return $article;
+    // Returns the created article with an HTTP 200 (ie OK) response
+    $view = $this->view($article, 200);
+    return $this->handleView($view);
 }
 ```
 
@@ -53,10 +54,13 @@ public function getArticleAction($articleId) {
         ->find($articleId);
 
     if (!$article) {
-        throw $this->createNotFoundException("No article found for id $articleId");
+        // Returns a 404 if we can't find the specified article.
+        $view = $this->view("No article found for id $articleId", 404);
+        return $this->handleView($view);
     }
 
-    return $article;
+    $view = $this->view($article, 200);
+    return $this->handleView($view);
 }
 ```
 
@@ -71,14 +75,17 @@ public function putArticleAction($articleId, Request $request) {
     $article = $em->getRepository('AppBundle:Article')->find($articleId);
 
     if (!$article) {
-        throw $this->createNotFoundException("No article found for id $articleId");
+        // Returns a 404 if we can't find the specified article.
+        $view = $this->view("No article found for id $articleId", 404);
+        return $this->handleView($view);
     }
 
     $article->setTitle($post->get('title'));
     $article->setContent($post->get('content'));
     $em->flush();
 
-    return $article;
+    $view = $this->view($article, 200);
+    return $this->handleView($view);
 }
 ```
 
@@ -92,13 +99,16 @@ public function deleteArticleAction($articleId) {
     $article = $em->getRepository('AppBundle:Article')->find($articleId);
 
     if (!$article) {
-        throw $this->createNotFoundException("No article found for id $articleId");
+        // Returns a 404 if we can't find the specified article.
+        $view = $this->view("No article found for id $articleId", 404);
+        return $this->handleView($view);
     }
 
     $em->remove($article);
     $em->flush();
 
-    return true;
+    $view = $this->view(true, 200);
+    return $this->handleView($view);
 }
 ```
 
