@@ -71,7 +71,9 @@ This simply says that all routes starting with `api` are of type `rest` (meaning
 
 namespace AppBundle\Controller;
 
-class UsersController
+use FOS\RestBundle\Controller as FOSCtlr;
+
+class UsersController extends FOSCtlr\FOSRestController
 {
     public function getUsersAction()
     {} // "get_users"            [GET] /users

@@ -92,3 +92,12 @@ This is the root of the web server meaning that all requests will go through it,
 - config.php: we already talked about it and you will probably only use it right after installing Symfony. It only works when accessed from localhost (if you read that file you'll see it makes sure of it)
 - app.php: it's the script that will actually route all your requests. When setting up your webserver, this should be the entry point, so `http://127.0.0.1:8000/that/page` is the same as `http://127.0.0.1:8000/app.php/that/page`
 - app_dev.php: same as app.php, except that it adds some debugging capabilities and nice error messages. If you're looking at `http://127.0.0.1:8000/that/page`, just go to `http://127.0.0.1:8000/app_dev.php/that/page`. Just like `config.php`, it's only available from localhost, for obvious security reasons.
+
+Folder rights
+-------------
+
+The user running your webserver obviously needs read access to all the files, so if you run `composer install` under a different account, you may have to change the access rights to the `vendor` folder recursively. It also needs write access in a few folders, namely:
+
+- /var/cache
+- /var/logs
+- /var/sessions
