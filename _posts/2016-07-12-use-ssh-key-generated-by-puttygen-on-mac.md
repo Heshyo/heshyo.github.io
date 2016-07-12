@@ -20,3 +20,5 @@ Host gitServerAlias
 ```
 
 Now when I `git pull` I can simply point to `ssh://gitServerAlias/path/to/my/repo.git`.
+
+For more info on the `config` file, run `man ssh_config`.
