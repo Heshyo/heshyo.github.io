@@ -78,4 +78,12 @@ I now try to update XCode but I actually need El Capitan. So I let it download t
 
 I can now install the latest XCode, which is pretty big meaning it still takes quite some time to download and then install...
 
-I can finally build and test on my iPhone. Oh wait, I still need to take care of those provisioning profiles. I of course select the wrong account for the app (clients usually want to have their own account). The app ID is on another account, but I can't seem to tell XCode to switch account, I always get `no valid signing identities matching the team id`. So I remove all other accounts then retry. This time it works, but of course, I don't have the required certificate on this Mac, as it was generated with PuttyGen on a PC, which I currently don't have access to...Oh well, I guess I'll stop here for now. I don't even remember why I started all this.
+I can finally build and test on my iPhone. Oh wait, I still need to take care of those provisioning profiles. I of course select the wrong account for the app (clients usually want to have their own account). The app ID is on another account, but I can't seem to tell XCode to switch account, I always get `no valid signing identities matching the team id`. So I remove all other accounts then retry. This time it works, but of course, I don't have the required certificate on this Mac, as it was generated with PuttyGen on a PC.
+
+So I get the `.p12` file from the PC, look around for a way to add it to the key chain. I find that I need to execute the following
+
+```
+security import myPrivateKey.p12 -k ~/Library/Keychains/login.keychain
+```
+
+I try again from XCode to debug on my device and it works! Now, what was it that I wanted to debug again?
