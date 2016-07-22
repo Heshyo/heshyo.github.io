@@ -1,7 +1,2 @@
-Git & GitHub
-
-Git:
-	"Git sync..." instead of "Push..."
-	"Commit..." then check "Amend previous commit"
-	"Reset xxx to this..."
-	"Stash save" then "Stash pop" or "Stash list"
+ionic2 with firebase3
+Xamarin with forms
