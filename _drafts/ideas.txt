@@ -1,7 +1,4 @@
-Git & GitHub
-
-Git:
-	"Git sync..." instead of "Push..."
-	"Commit..." then check "Amend previous commit"
-	"Reset xxx to this..."
-	"Stash save" then "Stash pop" or "Stash list"
+NUnit:
+	System.TypeLoadException : Could not load type XXX from assembly YYY
+	Test project and tested library had same name (actually it happens if the output has the same name, whether it's dll or exe)
+	https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d
