@@ -1,2 +1,9 @@
-ionic2 with firebase3
+NUnit:
+	System.TypeLoadException : Could not load type XXX from assembly YYY
+	Test project and tested library had same name (actually it happens if the output has the same name, whether it's dll or exe)
+	https://visualstudiogallery.msdn.microsoft.com/0da0f6bd-9bb6-4ae3-87a8-537788622f2d
+
+href="{{proto + url}}"
+https://angular.io/docs/js/latest/api/platform-browser/index/DomSanitizationService-class.html
+https://github.com/angular/angular/issues/9253ionic2 with firebase3
 Xamarin with forms
