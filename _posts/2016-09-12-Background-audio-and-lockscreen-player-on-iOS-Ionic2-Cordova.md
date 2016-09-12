@@ -16,6 +16,7 @@ On Phonegap, you just need to add the following in your config.xml (see [Modifyi
 ```
 
 Now that you can listen to your audio while your app is in the background, and even when the screen is locked, it'd be nice to be able to see what's playing and control it on the lock screen. For this you'll need to use some plugin(s), eg:
+
 - [cordova-plugin-remotecommand](https://github.com/leon/cordova-plugin-remotecommand) to play, pause, go to the next or previous song
 - [cordova-plugin-nowplaying](https://github.com/leon/cordova-plugin-nowplaying) to specify the title, artist and artwork
 
