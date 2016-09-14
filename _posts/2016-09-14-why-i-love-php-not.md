@@ -10,8 +10,10 @@ After my modifications, nothing was working correctly anymore. Fortunately a [co
 So I update the code to use `DateTimeImmutable`, but things are still not working correctly. I track the issue down to a call of `IntlDateFormatter::formatObject`. That function simply does not work on `DateTimeImmutable`
 
 ```php
-IntlDateFormatter::formatObject(new DateTime(), IntlDateFormatter::LONG, 'en'); // Returns what you would expect
-IntlDateFormatter::formatObject(new DateTimeImmutable(), IntlDateFormatter::LONG, 'en'); // Returns false
+// The following returns what you would expect
+IntlDateFormatter::formatObject(new DateTime(), IntlDateFormatter::LONG, 'en');
+// While the following returns false...
+IntlDateFormatter::formatObject(new DateTimeImmutable(), IntlDateFormatter::LONG, 'en');
 ```
 
 It would have made sense to me that `DateTime` and `DateTimeImmutable` be interchangeable, especially as they both implement `DateTimeInterface`:
