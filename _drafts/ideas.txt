@@ -7,3 +7,5 @@ href="{{proto + url}}"
 https://angular.io/docs/js/latest/api/platform-browser/index/DomSanitizationService-class.html
 https://github.com/angular/angular/issues/9253ionic2 with firebase3
 Xamarin with forms
+
+https://github.com/appium/appium/blob/master/docs/en/about-appium/intro.md
