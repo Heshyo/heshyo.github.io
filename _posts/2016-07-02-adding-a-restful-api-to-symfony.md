@@ -62,9 +62,10 @@ By default you shoud have `DefaultController.php` under `src/AppBundle/Controlle
 api:
     type:     rest
     resource: AppBundle\Controller\RestController
+    prefix:   /api
 ```
 
-This simply says that all routes starting with `api` are of type `rest` (meaning they'll be using the FOSRestBundle) and the corresponding controller to use is `RestController.php`. Now let's write a sample `RestController.php`:
+This simply says that all routes starting with `/api` (the `prefix`) are of type `rest` (meaning they'll be using the FOSRestBundle) and the corresponding controller to use is `RestController.php`. Now let's write a sample `RestController.php`:
 
 ```php
 <?php
