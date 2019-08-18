@@ -14,18 +14,27 @@ How to use Jekyll for your site/blog on GitHub Pages
 
 ### If you're on Windows
 1.	Install chocolatey (a package manager for Windows, similar to apt-get on Linux)
-	Run in command line as admin:
 
-```
+    Run in command line as admin:
+
+    ```
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
 ```
 
-2.	Install ruby through chocolatey
-	Open a new command line (not as admin) - you need to open a new command line, else chocolatey will not be available
+    To upgrade chocolatey in the future, run
 
-```
-choco install ruby -y
-```
+    ```choco upgrade chocolatey```
+
+2.	Install ruby through chocolatey
+
+    Open a new command line (not as admin) - you need to open a new command line, else chocolatey will not be available
+
+    ```choco install ruby -y```
+
+    To upgrade ruby later on, run (it seems it needs admin rights)
+
+    ```choco upgrade ruby```
+
 
 ### All systems
 Now you just need to install Jekyll through Gem, the Ruby package manager
@@ -34,6 +43,17 @@ Open a new command line (not as admin) - you need to open a new command line, el
 ```
 gem install jekyll
 ```
+
+After installing jekyll you may see:
+
+> MSYS2 could not be found. Please run 'ridk install'
+or download and install MSYS2 manually from https://msys2.github.io/
+
+This is needed for installing gems with native extensions.
+
+To upgrade jekyll later on, run
+
+```gem update jekyll```
 
 Now that Jekyll is installed, simply run the following at the root of your GitHub Pages repository
 
