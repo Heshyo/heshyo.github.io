@@ -15,4 +15,7 @@ First, delete your credentials in `Credential Manager` as described above.
 
 You then have 3 choices:
 
-- type your username and password each and every time you push. Just run `git config --global --unset credential.helper` to go back to the default credential helper, which is nothing.
+- type your username and password each and every time you push:
+Just run `git config --global --unset credential.helper` to go back to the default credential helper, which is nothing.
+- cache your credentials for x seconds:
+Run `git config --global credential.helper cache --timeout=3600`. The `timeout` parameter specifies the amount of seconds the credentials will stay cached
