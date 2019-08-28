@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Grand sudo rights to specific script files
+title: Grant sudo rights to specific script files
 ---
 
 When using [Symfony](https://symfony.com/), we often need to clear the cache. The problem is that depending on how you configure the user rights, you may need sudo privileges to clear the cache: eg the owner of the Symfony files is a normal user, the group is the web server. Whenever Symfony creates the cache directories and files, those are now owned by it, and the normal user cannot delete them.
