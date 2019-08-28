@@ -8,11 +8,36 @@ How to use Jekyll for your site/blog on GitHub Pages
 
 [GitHub Pages](https://pages.github.com/) uses [Jekyll](https://jekyllrb.com/), "a simple, blog-aware, static site generator", so let's install it.
 
+### New way to install it
+
+Since the creation of the post, it seems the recommended way to install Jekyll on Windows changed.
+
+1.	Install the [RubyInstaller for Windows](https://rubyinstaller.org/) (get the recommended Devkit version if you're unsure). Install MSYS2 at the end of the wizard.
+2.	Install Jekyll and bundler gems
+
+	```gem install jekyll bundler```
+
+3.	Create your new site (below named _mysite_) with 
+
+	```jekyll new mysite```
+
+	This creates a director name _mysite_
+
+4.	Go to the directory and build the site
+
+	```
+	cd mysite
+	bundle exec jekyll serve
+	```
+
+5.	You should see that your site is available at <http://localhost:4000>
+
 ### If you're on Linux or Mac
 1.	Install [Ruby](https://www.ruby-lang.org/), see more [here](https://www.ruby-lang.org/en/downloads/)
 2.	Install [Gem](https://rubygems.org/), the Ruby package manager, see more [here](https://rubygems.org/pages/download)
 
 ### If you're on Windows
+
 1.	Install chocolatey (a package manager for Windows, similar to apt-get on Linux)
 
     Run in command line as admin:
