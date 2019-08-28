@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
-gem 'jekyll-paginate'
-gem 'jekyll-compose', group: [:jekyll_plugins]
+gem "jekyll", ">= 4.0.0"
+
+group :jekyll_plugins do
+  gem 'jekyll-paginate'
+  gem 'jekyll-compose'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+end
